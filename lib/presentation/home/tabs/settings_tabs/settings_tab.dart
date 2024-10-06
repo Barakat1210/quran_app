@@ -14,11 +14,13 @@ class SettingsTab extends StatelessWidget {
           children: [
             Text(
               'Theme',
-              style:Theme.of(context).textTheme.labelSmall,
-              ),
-            SizedBox(height: 4,),
+              style: Theme.of(context).textTheme.labelSmall,
+            ),
+            SizedBox(
+              height: 4,
+            ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 showThemeBottomSheet(context);
               },
               child: Container(
@@ -33,15 +35,18 @@ class SettingsTab extends StatelessWidget {
                     style: Theme.of(context).textTheme.labelSmall,
                   )),
             ),
-            SizedBox(height: 15,),
-
+            SizedBox(
+              height: 15,
+            ),
             Text(
               'Language',
-              style:Theme.of(context).textTheme.labelSmall,
+              style: Theme.of(context).textTheme.labelSmall,
             ),
-            SizedBox(height: 4,),
+            SizedBox(
+              height: 4,
+            ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 showLanguageBottomSheet(context);
               },
               child: Container(
@@ -61,10 +66,16 @@ class SettingsTab extends StatelessWidget {
       ),
     );
   }
-  void showThemeBottomSheet(BuildContext context){
-    showModalBottomSheet(context: context, builder: (context)=>ThemeBottomSheet(),);
+
+  void showThemeBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => ThemeBottomSheet(),
+    );
   }
-  void showLanguageBottomSheet(BuildContext context){
-    showModalBottomSheet(context: context, builder: (context)=>LanguageBottomSheet());
+
+  void showLanguageBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+        context: context, builder: (context) => LanguageBottomSheet());
   }
 }

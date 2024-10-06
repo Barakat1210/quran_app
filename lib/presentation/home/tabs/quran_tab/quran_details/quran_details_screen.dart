@@ -1,3 +1,4 @@
+import 'package:eslam_quran/config/theme/my_theme.dart';
 import 'package:eslam_quran/core/core/assets_manager.dart';
 import 'package:eslam_quran/presentation/home/tabs/quran_tab/quran_details/quran_widget.dart';
 import 'package:eslam_quran/presentation/home/tabs/quran_tab/widget/quran_title_wiget/quran_title_widget.dart';
@@ -16,7 +17,6 @@ class _QuranDetalsScreenState extends State<QuranDetalsScreen> {
   late SuraArgs args;
   @override
 //   void initState() {
-//    TODO: implement initState
 //   super.initState();
 //
 //    SuraArgs args = ModalRoute.of(context)?.settings.arguments as SuraArgs;
@@ -29,7 +29,9 @@ class _QuranDetalsScreenState extends State<QuranDetalsScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(AssetsManager.lightMainBg),
+          image: AssetImage(MyTheme.isDarkEnabled?
+          AssetsManager.darkMainBg:AssetsManager.lightMainBg,
+          ),
           fit: BoxFit.fill,
         ),
       ),

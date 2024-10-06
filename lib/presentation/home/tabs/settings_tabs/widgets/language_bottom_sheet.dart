@@ -10,15 +10,26 @@ class LanguageBottomSheet extends StatelessWidget {
       padding: EdgeInsets.all(12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('English',style: Theme.of(context).textTheme.bodyMedium),
-            Icon(Icons.check,size: 30,color: Theme.of(context).dividerColor,),
-          ],
-        ),Text('Arabic',style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.black,)),
-      ],
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'English',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              Icon(
+                Icons.check,
+                size: 30,
+                color: Theme.of(context).dividerColor,
+              ),
+            ],
+          ),
+          Text('Arabic',
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Colors.black,
+                  )),
+        ],
       ),
     );
   }

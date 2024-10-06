@@ -3,9 +3,12 @@ import 'package:eslam_quran/core/core/fonts_manager.dart';
 import 'package:flutter/material.dart';
 
 class MyTheme {
+  static bool isDarkEnabled=true;
   static final ThemeData lighttheme = ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: ColorsManager.goldColor),
+    primaryColor: ColorsManager.goldColor,
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.transparent,
+        backgroundColor: Colors.transparent,
       elevation: 0,
       titleTextStyle: TextStyle(
         fontSize: 30,
@@ -21,6 +24,10 @@ class MyTheme {
       ),
       margin: EdgeInsets.all(8),
     ),
+    iconTheme: IconThemeData(
+  color: ColorsManager.goldColor,
+    size: 30,
+  ),
     dividerColor: ColorsManager.goldColor,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         selectedItemColor: Colors.black,
@@ -32,13 +39,17 @@ class MyTheme {
         showUnselectedLabels: false,
         elevation: 0),
     bottomSheetTheme: BottomSheetThemeData(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
-      ),
-      elevation: 18,
-      backgroundColor: Colors.white
-    ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
+        ),
+        elevation: 18,
+        backgroundColor: Colors.white),
     textTheme: const TextTheme(
+      displayMedium: TextStyle(
+        fontSize: 18,
+        color: Colors.black,
+        fontWeight: FontWeight.w700,
+      ),
       titleSmall: const TextStyle(
         fontWeight: FontWeight.w400,
         fontSize: 25,
@@ -68,7 +79,98 @@ class MyTheme {
         fontWeight: FontWeight.w700,
         fontSize: 18,
         color: ColorsManager.goldColor,
+      ), bodyLarge: TextStyle(
+        fontWeight: FontWeight.w400,fontSize: 20,color: Colors.black
+    ),
+    ),
+  );
+  static final ThemeData darktheme = ThemeData(
+
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: ColorsManager.darkblue,
+      primary: ColorsManager.darkblue,
+      onPrimary: Colors.yellow,
+    ),
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(
+        color: Colors.white,
+      ),
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      titleTextStyle: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w600,
+        color: Colors.white,
+        backgroundColor: Colors.transparent,
       ),
     ),
+    cardTheme: CardTheme(
+      color: ColorsManager.darkblue,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      margin: EdgeInsets.all(8),
+    ),
+    dividerColor: ColorsManager.yellowColor,
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        selectedItemColor: ColorsManager.yellowColor,
+        unselectedItemColor: Colors.white,
+        selectedIconTheme: IconThemeData(
+          size: 36,
+        ),
+        showSelectedLabels: true,
+        showUnselectedLabels: false,
+        elevation: 20),
+    bottomSheetTheme: BottomSheetThemeData(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+      ),
+      elevation: 18,
+      backgroundColor: ColorsManager.darkblue,
+    ),iconTheme: IconThemeData(
+    color: ColorsManager.yellowColor,
+    size: 30,
+  ),
+    textTheme: const TextTheme(
+      titleSmall: const TextStyle(
+        fontWeight: FontWeight.w400,
+        fontSize: 25,
+        color: Colors.white,
+      ),
+      titleMedium: const TextStyle(
+        fontWeight: FontWeight.w600,
+        fontSize: 25,
+        color: Colors.white,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+        color: ColorsManager.yellowColor,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: Colors.black,
+      ),
+      labelSmall: TextStyle(
+        fontWeight: FontWeight.w700,
+        fontSize: 16,
+        color: ColorsManager.yellowColor,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.w700,
+        color: ColorsManager.yellowColor,
+      ),
+      bodyLarge: TextStyle(
+        fontWeight: FontWeight.w400,fontSize: 20,color: ColorsManager.yellowColor
+      ),
+      displayMedium: TextStyle(
+        fontSize: 18,
+        color: Colors.white,
+        fontWeight: FontWeight.w700,
+      ),
+    ),
+
   );
 }

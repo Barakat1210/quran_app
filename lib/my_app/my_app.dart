@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       }
       ,initialRoute:RoutesManager.SplashRoute ,
       theme: MyTheme.lighttheme,
-     // darkTheme: MyTheme.darkTheme,
-      themeMode: ThemeMode.light,
+     darkTheme: MyTheme.darktheme,
+      themeMode: ThemeMode.dark,
     );
   }
 }

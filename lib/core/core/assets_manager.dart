@@ -7,6 +7,7 @@ class AssetsManager{
   static const String RadioIcon='assets/images/icon_radio.png';
   static const String QuranheaderImage='assets/images/qur2an_screen_logo.png';
   static const String HadithHeaderImage='assets/images/hadeth_logo.png';
+  static const String darkMainBg ='assets/images/dark_bg.png';
 
 
 
