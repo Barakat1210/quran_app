@@ -11,7 +11,6 @@ class QuranDetalsScreen extends StatefulWidget {
   @override
   State<QuranDetalsScreen> createState() => _QuranDetalsScreenState();
 }
-
 class _QuranDetalsScreenState extends State<QuranDetalsScreen> {
   List<String> verses = [];
   late SuraArgs args;

@@ -1,6 +1,6 @@
 import 'package:eslam_quran/core/core/strings_manager.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HadithHeaderName extends StatelessWidget {
   const HadithHeaderName({super.key});
 
@@ -16,7 +16,7 @@ class HadithHeaderName extends StatelessWidget {
                 color: Theme.of(context).dividerColor,width: 2,
               ))),
       child: Text(
-        Strings_Manager.ahadithName,
+        AppLocalizations.of(context)!.ahadithName,
         style: Theme.of(context).textTheme.titleMedium,
       ),
     );

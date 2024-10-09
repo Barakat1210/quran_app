@@ -3,12 +3,14 @@ import 'package:eslam_quran/core/core/fonts_manager.dart';
 import 'package:flutter/material.dart';
 
 class MyTheme {
-  static bool isDarkEnabled=true;
+  static bool isDarkEnabled = false;
   static final ThemeData lighttheme = ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: ColorsManager.goldColor),
+    colorScheme: ColorScheme.fromSeed(seedColor: ColorsManager.goldColor,
+    primary: ColorsManager.goldColor,
+    secondary: Colors.white,),
     primaryColor: ColorsManager.goldColor,
     appBarTheme: AppBarTheme(
-        backgroundColor: Colors.transparent,
+      backgroundColor: Colors.transparent,
       elevation: 0,
       titleTextStyle: TextStyle(
         fontSize: 30,
@@ -25,9 +27,9 @@ class MyTheme {
       margin: EdgeInsets.all(8),
     ),
     iconTheme: IconThemeData(
-  color: ColorsManager.goldColor,
-    size: 30,
-  ),
+      color: ColorsManager.goldColor,
+      size: 30,
+    ),
     dividerColor: ColorsManager.goldColor,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         selectedItemColor: Colors.black,
@@ -79,17 +81,17 @@ class MyTheme {
         fontWeight: FontWeight.w700,
         fontSize: 18,
         color: ColorsManager.goldColor,
-      ), bodyLarge: TextStyle(
-        fontWeight: FontWeight.w400,fontSize: 20,color: Colors.black
-    ),
+      ),
+      bodyLarge: TextStyle(
+          fontWeight: FontWeight.w400, fontSize: 20, color: Colors.black),
     ),
   );
   static final ThemeData darktheme = ThemeData(
-
+    primaryColor: ColorsManager.darkblue,
     colorScheme: ColorScheme.fromSeed(
       seedColor: ColorsManager.darkblue,
       primary: ColorsManager.darkblue,
-      onPrimary: Colors.yellow,
+      secondary:Colors.white,
     ),
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(
@@ -127,10 +129,11 @@ class MyTheme {
       ),
       elevation: 18,
       backgroundColor: ColorsManager.darkblue,
-    ),iconTheme: IconThemeData(
-    color: ColorsManager.yellowColor,
-    size: 30,
-  ),
+    ),
+    iconTheme: IconThemeData(
+      color: ColorsManager.yellowColor,
+      size: 30,
+    ),
     textTheme: const TextTheme(
       titleSmall: const TextStyle(
         fontWeight: FontWeight.w400,
@@ -163,7 +166,9 @@ class MyTheme {
         color: ColorsManager.yellowColor,
       ),
       bodyLarge: TextStyle(
-        fontWeight: FontWeight.w400,fontSize: 20,color: ColorsManager.yellowColor
+        fontWeight: FontWeight.w400,
+        fontSize: 20,
+        color: ColorsManager.yellowColor,
       ),
       displayMedium: TextStyle(
         fontSize: 18,
@@ -171,6 +176,5 @@ class MyTheme {
         fontWeight: FontWeight.w700,
       ),
     ),
-
   );
 }
