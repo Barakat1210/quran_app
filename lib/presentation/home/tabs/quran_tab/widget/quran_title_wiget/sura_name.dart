@@ -1,7 +1,7 @@
 import 'package:eslam_quran/core/core/colors_manager.dart';
 import 'package:eslam_quran/core/core/strings_manager.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class SuraName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,7 @@ class SuraName extends StatelessWidget {
           children: [
             Expanded(
               flex: 2,
-                child: Text(
-              Strings_Manager.suraName,
+                child: Text(AppLocalizations.of(context)!.quranTab,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium,
             )),
@@ -35,7 +34,7 @@ class SuraName extends StatelessWidget {
             Expanded(
               flex: 2,
                 child: Text(
-              Strings_Manager.NumofVerses,
+                  AppLocalizations.of(context)!.versesNumber,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium,
             )),

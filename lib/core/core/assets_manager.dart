@@ -8,6 +8,9 @@ class AssetsManager{
   static const String QuranheaderImage='assets/images/qur2an_screen_logo.png';
   static const String HadithHeaderImage='assets/images/hadeth_logo.png';
   static const String darkMainBg ='assets/images/dark_bg.png';
+  static const String tasbha ='assets/images/body_sebha_logo.png';
+  static const String tasbha_log='assets/images/head_sebha_logo.png';
+
 
 
 

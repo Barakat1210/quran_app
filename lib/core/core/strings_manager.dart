@@ -1,8 +1,8 @@
 class Strings_Manager{
-  static const String appTitle='Quran';
-  static const String suraName='اسم السورة ';
-  static const String NumofVerses='عدد الايات ';
-  static const String ahadithName='الاحاديث ';
+  static const String appTitle='Eslami';
+  static const String suraName='ChapterName ';
+  static const String versesNumber='VersesNumber ';
+  static const String ahadithName='El-ahadith ';
   static const String quranLabel='Quran';
   static const String hadithLabel='Hadith';
   static const String tasbehLabel='Tasbeh';
