@@ -1,6 +1,7 @@
 import 'package:eslam_quran/core/core/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
 class TasbehTab extends StatefulWidget {
   TasbehTab({
     super.key,
@@ -10,12 +11,9 @@ class TasbehTab extends StatefulWidget {
   State<TasbehTab> createState() => _TasbehTabState();
 }
 
-class _TasbehTabState extends State<TasbehTab>
-
-   with SingleTickerProviderStateMixin {
-
+class _TasbehTabState extends State<TasbehTab> with SingleTickerProviderStateMixin {
   int counter = 0;
-  String butText='click her';
+  String butText = 'click her';
   late AnimationController controller;
   @override
   void initState() {
@@ -25,26 +23,29 @@ class _TasbehTabState extends State<TasbehTab>
       vsync: this,
     );
   }
+
   @override
   void dispose() {
     controller.dispose();
     super.dispose();
   }
+
   void _incrementCounter() {
     setState(() {
       counter++;
       controller.forward(from: 0); // إعادة تشغيل الحركة عند الضغط على الزر
-    if(counter<33){
-      butText='سبحان الله';
-    }else if(counter>=33&&counter<66){
-        butText='الحمد لله';
-      }else if(counter>=66&&counter<99){
-      butText='لا اله الا الله ';
-    }else if(counter>=99&&counter<133){
-      butText='الله اكير';
-    }else{
-    counter=0;
-    butText='بدء التسبيح';}
+      if (counter < 33) {
+        butText = 'سبحان الله';
+      } else if (counter >= 33 && counter < 66) {
+        butText = 'الحمد لله';
+      } else if (counter >= 66 && counter < 99) {
+        butText = 'لا اله الا الله ';
+      } else if (counter >= 99 && counter < 133) {
+        butText = 'الله اكير';
+      } else {
+        counter = 0;
+        butText = 'بدء التسبيح';
+      }
     });
   }
 
@@ -57,16 +58,30 @@ class _TasbehTabState extends State<TasbehTab>
         children: [
           Stack(
             alignment: Alignment.center,
-            children: [Container(
-                child: Image.asset(AssetsManager.tasbha_log)),
+            children: [
               RotationTransition(
                 turns: controller.drive(
                   Tween(begin: 0.0, end: 1.0),
                 ),
                 child: Container(
-                    child: Image.asset(AssetsManager.tasbha)),
-              ),],
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  child: Image.asset(AssetsManager.tasbha),
+                ),
+              ),
+              
+              Positioned(
+                bottom: MediaQuery.of(context).size.height*0.13,
+                left: 23,
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  child: Image.asset(AssetsManager.tasbha_log),
+                ),
+              ),
+            ],
           ),
+
           Text(
             'عدد التسبيحات ',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(

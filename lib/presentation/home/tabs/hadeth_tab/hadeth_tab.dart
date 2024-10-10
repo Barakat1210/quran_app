@@ -1,5 +1,4 @@
 import 'package:eslam_quran/core/core/assets_manager.dart';
-import 'package:eslam_quran/core/core/strings_manager.dart';
 import 'package:eslam_quran/presentation/home/tabs/hadeth_tab/widgets/hadith_header_name.dart';
 import 'package:eslam_quran/presentation/home/tabs/hadeth_tab/widgets/hadith_title_widget.dart';
 import 'package:flutter/material.dart';
