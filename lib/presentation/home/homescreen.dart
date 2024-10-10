@@ -1,11 +1,12 @@
 import 'package:eslam_quran/config/theme/my_theme.dart';
 import 'package:eslam_quran/core/core/assets_manager.dart';
-import 'package:eslam_quran/core/core/strings_manager.dart';
 import 'package:eslam_quran/presentation/home/tabs/hadeth_tab/hadeth_tab.dart';
 import 'package:eslam_quran/presentation/home/tabs/radio_tab/radio_tab.dart';
 import 'package:eslam_quran/presentation/home/tabs/settings_tabs/settings_tab.dart';
 import 'package:eslam_quran/presentation/home/tabs/tasbeh_tab/sebha_tab.dart';
+import 'package:eslam_quran/provider/settings_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'tabs/quran_tab/quaran_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -25,14 +26,11 @@ class _Home_ScreenState extends State<Home_Screen> {
   int selectedindex = 0;
   @override
   Widget build(BuildContext context) {
+    var provider=Provider.of<SettingsProvider>(context);
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(
-                MyTheme.isDarkEnabled
-                    ? AssetsManager.darkMainBg
-                    : AssetsManager.lightMainBg,
-              ),
+              image: AssetImage(provider.getBackgroundImage()),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(

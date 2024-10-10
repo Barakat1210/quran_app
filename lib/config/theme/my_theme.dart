@@ -3,7 +3,7 @@ import 'package:eslam_quran/core/core/fonts_manager.dart';
 import 'package:flutter/material.dart';
 
 class MyTheme {
-  static bool isDarkEnabled = false;
+  //static bool isDarkEnabled = false;
   static final ThemeData lighttheme = ThemeData(
     colorScheme: ColorScheme.fromSeed(seedColor: ColorsManager.goldColor,
     primary: ColorsManager.goldColor,
