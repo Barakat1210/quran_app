@@ -8,5 +8,6 @@ class Strings_Manager{
   static const String tasbehLabel='Tasbeh';
   static const String radioLabel='Radio';
   static const String settingsLabel='Settings';
+  static const String numberTasbha='عدد التسبيحات';
 
 }

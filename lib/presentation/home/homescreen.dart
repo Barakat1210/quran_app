@@ -4,6 +4,7 @@ import 'package:eslam_quran/presentation/home/tabs/hadeth_tab/hadeth_tab.dart';
 import 'package:eslam_quran/presentation/home/tabs/radio_tab/radio_tab.dart';
 import 'package:eslam_quran/presentation/home/tabs/settings_tabs/settings_tab.dart';
 import 'package:eslam_quran/presentation/home/tabs/tasbeh_tab/sebha_tab.dart';
+import 'package:eslam_quran/provider/sebha_provider.dart';
 import 'package:eslam_quran/provider/settings_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +20,7 @@ class _Home_ScreenState extends State<Home_Screen> {
   List<Widget> tabs = [
     QuaranTab(),
     HadethTab(),
-    TasbehTab(),
+    ChangeNotifierProvider(create:(context)=>SebhaProvider(),child: TasbehTab()),
     RadioTab(),
     SettingsTab(),
   ];

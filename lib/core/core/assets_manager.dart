@@ -8,8 +8,11 @@ class AssetsManager{
   static const String QuranheaderImage='assets/images/qur2an_screen_logo.png';
   static const String HadithHeaderImage='assets/images/hadeth_logo.png';
   static const String darkMainBg ='assets/images/dark_bg.png';
-  static const String tasbha ='assets/images/body_sebha_logo.png';
-  static const String tasbha_log='assets/images/head_sebha_logo.png';
+  static const String tasbha_body ='assets/images/body_sebha_logo.png';
+  static const String tasbha_body_dark ='assets/images/2.0x/body_sebha_dark@2x.png';
+  static const String tasbha_header='assets/images/head_sebha_logo.png';
+  static const String tasbha_header_dark='assets/images/2.0x/head_sebha_dark@2x.png';
+
 
 
 
