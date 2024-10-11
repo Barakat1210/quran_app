@@ -9,7 +9,6 @@ class HadethTab extends StatefulWidget {
   @override
   State<HadethTab> createState() => _HadethTabState();
 }
-
 class _HadethTabState extends State<HadethTab> {
   List<HadithItem> allHadithList = [];
   @override
